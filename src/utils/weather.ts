@@ -11,7 +11,9 @@ export async function getWeatherDetails(city: string) {
   });
   
   const data = await response.json();
+  // console.log(data)
+
   if (data.cod == '404') return "NOT AVAILABLE"
   
-  return data.weather[0].main;
+  return JSON.stringify(data);
 }

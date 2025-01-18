@@ -36,7 +36,7 @@ async function main() {
 
       const call = JSON.parse(result);
       if (call.type == "output") {
-        console.log(`🤖: ${call.output}\n\n`);
+        console.log(`\n\n🤖: ${call.output}\n\n`);
         break;
       } else if (call.type == "action") {
         // @ts-ignore
